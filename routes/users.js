@@ -36,6 +36,15 @@ router.post('/login', function (req, res, next) {
         res.sendStatus(500);
     })
 
+});
+
+router.get('/checkusername', function (req, res, next) {
+    var username = req.query.username;
+    db.checkUsername(username, function () {
+        res.send({success: true, message: 'Exists the username'});
+    }, function () {
+        res.send({success: false, message: 'Don\'t exist the username'});
+    });
 })
 
 module.exports = router;

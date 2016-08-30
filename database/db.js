@@ -50,3 +50,17 @@ exports.login = function (email, password, callback, notFound) {
     });
 };
 
+exports.checkUsername = function (username, found, notFound) {
+    User.findOne({username: username}, function (err, doc) {
+        if (err) {
+
+        }
+        if (doc) {
+            console.log(doc);
+            found();
+        } else {
+            notFound();
+        }
+    });
+};
+
