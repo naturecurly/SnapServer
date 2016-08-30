@@ -2,5 +2,5 @@
  * Created by leveyleonhardt on 8/27/16.
  */
 module.exports = {
-    dbUrl: 'mongodb://localhost:27017/snapdb'
+    dbUrl: 'mongodb://127.0.0.1:27017/snapdb'
 }
