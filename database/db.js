@@ -14,10 +14,10 @@ db.once('open', function () {
 });
 
 var userSchema = mongoose.Schema({
-    username: String,
+    username: {type: String, unique: true},
     birthday: Date,
     mobile: String,
-    email: String,
+    email: {type: String, unique: true},
     password: String,
     avatar: String,
     friend: [String],
