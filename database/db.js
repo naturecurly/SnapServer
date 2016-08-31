@@ -64,3 +64,16 @@ exports.checkUsername = function (username, found, notFound) {
     });
 };
 
+exports.checkEmail = function (email, found, notFound) {
+    User.findOne({email: email}, function (err, doc) {
+        if (err) {
+
+        }
+        if (doc) {
+            found();
+        } else {
+            notFound();
+        }
+    })
+}
+

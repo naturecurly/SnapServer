@@ -45,6 +45,15 @@ router.get('/checkusername', function (req, res, next) {
     }, function () {
         res.send({success: false, message: 'Don\'t exist the username'});
     });
-})
+});
+
+router.get('/checkemail', function (req, res, next) {
+    var email = req.query.email;
+    db.checkEmail(email, function () {
+        res.send({success: true, message: 'Exists the email'});
+    }, function () {
+        res.send({success: false, message: 'Don\'t exist the email'});
+    });
+});
 
 module.exports = router;
