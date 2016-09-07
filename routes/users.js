@@ -10,8 +10,8 @@ router.get('/', function (req, res, next) {
 router.post('/reg', function (req, res, next) {
     var user = req.body;
     if ('password' in user && user.password.length != 0) {
-        var password_md5 = cryptoUtil.cryptoMethod.md5(user.password);
-        user.password = password_md5;
+        // var password_md5 = cryptoUtil.cryptoMethod.md5(user.password);
+        user.password = user.password;
     }
     console.log(user);
     db.createUser(user).save(function (err, doc) {
