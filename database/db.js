@@ -74,6 +74,32 @@ exports.checkEmail = function (email, found, notFound) {
         } else {
             notFound();
         }
-    })
-}
+    });
+};
+
+exports.addFriend = function (account, username, success, fail) {
+    if (account == username) {
+        fail();
+    } else {
+        User.findOne({username: account}, function (err, doc) {
+            if (doc) {
+                User.findOne({username: username}, function (err, doc) {
+                    if (doc) {
+                        User.update({username: account}, {$addToSet: {friend: username}}, function (err, doc) {
+                            if (doc.nModified == 0) {
+                                fail();
+                            } else {
+                                success();
+                            }
+                        });
+                    } else {
+                        fail();
+                    }
+                });
+            } else {
+                fail();
+            }
+        });
+    }
+};
 

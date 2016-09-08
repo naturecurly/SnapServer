@@ -56,4 +56,16 @@ router.get('/checkemail', function (req, res, next) {
     });
 });
 
+router.get('/addfriends', function (req, res, next) {
+    var username = req.query.username;
+    var account = req.query.account;
+    db.addFriend(account, username, function () {
+        res.send({success: true, message: 'Add success'});
+    }, function () {
+        res.send({success: false, message: 'Add fail'});
+    });
+
+
+});
+
 module.exports = router;
