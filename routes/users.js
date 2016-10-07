@@ -17,7 +17,7 @@ router.post('/reg', function (req, res, next) {
     db.createUser(user).save(function (err, doc) {
         if (err) {
             console.log('insert into database error');
-            res.send('register fail')
+            res.sendStatus(500);
         } else {
             console.log(doc);
             res.send(doc);
@@ -67,5 +67,15 @@ router.get('/addfriends', function (req, res, next) {
 
 
 });
+
+router.post('/updateid', function (req, res, next) {
+    var deviceId = req.body.deviceId;
+    var username = req.body.username;
+    db.updateDeviceId(username, deviceId, function (doc) {
+        res.send(doc);
+    }, function () {
+        res.sendStatus(500);
+    })
+})
 
 module.exports = router;

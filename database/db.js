@@ -103,3 +103,19 @@ exports.addFriend = function (account, username, success, fail) {
     }
 };
 
+exports.updateDeviceId = function (username, deviceId, success, fail) {
+    User.findOneAndUpdate({username: username}, {device_id: deviceId}, function (err, doc) {
+        if (err) {
+            console.log("update error!");
+            fail();
+        } else {
+            if (doc) {
+                console.log(doc);
+                success(doc);
+            } else {
+                fail();
+            }
+        }
+    })
+};
+
