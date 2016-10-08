@@ -116,6 +116,21 @@ exports.updateDeviceId = function (username, deviceId, success, fail) {
                 fail();
             }
         }
-    })
+    });
+};
+
+exports.getDeviceId = function (from, to, success, fail) {
+    User.find({username: {$in: [from, to]}}, function (err, doc) {
+        if (err) {
+            console.log("failed to find id");
+            fail();
+        } else {
+            if (doc) {
+                success(doc);
+            } else {
+                fail();
+            }
+        }
+    });
 };
 
