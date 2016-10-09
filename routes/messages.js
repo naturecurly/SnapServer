@@ -37,29 +37,30 @@ router.post('/send', function (req, res, next) {
                 }
 
             }
-        }
-        var message = {
-            to: toId,
-            data: {
-                type: type,
-                message: message
-            },
-            notification: {
-                title: from + 'sends you a message.',
-                body: 'Click to open',
-                sound: 'default'
-            }
-        }
 
-        options.body = message;
-        request(options, function (err, incoming, resbonses) {
-            if (err) {
-                console.log('error');
-                res.sendStatus(500);
-            } else {
-                res.send(resbonses);
+            var message = {
+                to: toId,
+                data: {
+                    type: type,
+                    message: message
+                },
+                notification: {
+                    title: from + 'sends you a message.',
+                    body: 'Click to open',
+                    sound: 'default'
+                }
             }
-        })
+
+            options.body = message;
+            request(options, function (err, incoming, resbonses) {
+                if (err) {
+                    console.log('error');
+                    res.sendStatus(500);
+                } else {
+                    res.send(resbonses);
+                }
+            })
+        }
     }, function () {
         res.sendStatus(500);
     });

@@ -24,21 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="www" pinned="false" current-in-tab="false">
+      <file leaf-file-name="www" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/www">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="210">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="messages.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/messages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+            <state relative-caret-position="900">
+              <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
               <folding>
                 <element signature="e#0#48#0" expanded="false" />
               </folding>
@@ -136,8 +136,8 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/database/db.js" />
         <option value="$PROJECT_DIR$/messages/sendToFirebase.js" />
-        <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/routes/messages.js" />
+        <option value="$PROJECT_DIR$/bin/www" />
       </list>
     </option>
   </component>
@@ -320,7 +320,7 @@
       <workItem from="1475119600020" duration="750000" />
       <workItem from="1475321097813" duration="645000" />
       <workItem from="1475450120215" duration="7995000" />
-      <workItem from="1475818177310" duration="13895000" />
+      <workItem from="1475818177310" duration="14091000" />
     </task>
     <task id="LOCAL-00001" summary="-IMPROVEMENT: Set the username and email to be unique.">
       <created>1472617693489</created>
@@ -357,11 +357,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475905828994</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="-FIX: The bug when 'from' and 'to' are the same.">
+      <created>1475987050654</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1475987050654</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47514000" />
+    <option name="totallyTimeSpent" value="47710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="146" y="36" width="1210" height="804" extended-state="0" />
@@ -403,7 +410,8 @@
     <MESSAGE value="-NEW: Add the &quot;add friends&quot; function." />
     <MESSAGE value="-NEW: Add upload function and update device id function." />
     <MESSAGE value="-NEW: Add send function." />
-    <option name="LAST_COMMIT_MESSAGE" value="-NEW: Add send function." />
+    <MESSAGE value="-FIX: The bug when 'from' and 'to' are the same." />
+    <option name="LAST_COMMIT_MESSAGE" value="-FIX: The bug when 'from' and 'to' are the same." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -612,21 +620,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/messages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        <state relative-caret-position="900">
+          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
           <folding>
             <element signature="e#0#48#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
