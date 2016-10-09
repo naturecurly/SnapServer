@@ -26,13 +26,17 @@ router.post('/send', function (req, res, next) {
         console.log(doc);
         var fromId = "";
         var toId = "";
-        for (var i = 0; i < 2; ++i) {
-            if (doc[i].username == from) {
-                fromId = doc[i].device_id;
-            } else {
-                toId = doc[i].device_id;
-            }
+        if (doc.length != 2) {
+            res.sendStatus(500);
+        } else {
+            for (var i = 0; i < 2; ++i) {
+                if (doc[i].username == from) {
+                    fromId = doc[i].device_id;
+                } else {
+                    toId = doc[i].device_id;
+                }
 
+            }
         }
         var message = {
             to: toId,

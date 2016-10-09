@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc572e51-7196-44cd-a55f-59fb7e5505af" name="Default" comment="-NEW: Add upload function and update device id function.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/messages.js" />
+    <list default="true" id="bc572e51-7196-44cd-a55f-59fb7e5505af" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/db.js" afterPath="$PROJECT_DIR$/database/db.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/messages.js" afterPath="$PROJECT_DIR$/routes/messages.js" />
     </list>
     <ignored path="SnapServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +24,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="www" pinned="false" current-in-tab="true">
+      <file leaf-file-name="www" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/www">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -37,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="messages.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/messages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+            <state relative-caret-position="300">
+              <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
               <folding>
                 <element signature="e#0#48#0" expanded="false" />
               </folding>
@@ -139,8 +136,8 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/database/db.js" />
         <option value="$PROJECT_DIR$/messages/sendToFirebase.js" />
-        <option value="$PROJECT_DIR$/routes/messages.js" />
         <option value="$PROJECT_DIR$/bin/www" />
+        <option value="$PROJECT_DIR$/routes/messages.js" />
       </list>
     </option>
   </component>
@@ -323,7 +320,7 @@
       <workItem from="1475119600020" duration="750000" />
       <workItem from="1475321097813" duration="645000" />
       <workItem from="1475450120215" duration="7995000" />
-      <workItem from="1475818177310" duration="13516000" />
+      <workItem from="1475818177310" duration="13895000" />
     </task>
     <task id="LOCAL-00001" summary="-IMPROVEMENT: Set the username and email to be unique.">
       <created>1472617693489</created>
@@ -353,11 +350,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475832053311</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="-NEW: Add send function.">
+      <created>1475905828994</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1475905828994</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47135000" />
+    <option name="totallyTimeSpent" value="47514000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="146" y="36" width="1210" height="804" extended-state="0" />
@@ -398,7 +402,8 @@
     <MESSAGE value="-REMOVE: Remove the server md5 digest." />
     <MESSAGE value="-NEW: Add the &quot;add friends&quot; function." />
     <MESSAGE value="-NEW: Add upload function and update device id function." />
-    <option name="LAST_COMMIT_MESSAGE" value="-NEW: Add upload function and update device id function." />
+    <MESSAGE value="-NEW: Add send function." />
+    <option name="LAST_COMMIT_MESSAGE" value="-NEW: Add send function." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -607,21 +612,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/messages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#48#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/messages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
