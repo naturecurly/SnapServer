@@ -21,7 +21,7 @@ router.post('/send', function (req, res, next) {
     var from = req.body.from;
     var to = req.body.to;
     var type = req.body.type;
-    var message = req.body.message;
+    var content = req.body.content;
     db.getDeviceId(from, to, function (doc) {
         console.log(doc);
         var fromId = "";
@@ -38,11 +38,11 @@ router.post('/send', function (req, res, next) {
 
             }
 
-            var message = {
+            var messageToSend = {
                 to: toId,
                 data: {
                     type: type,
-                    message: message
+                    message: content
                 },
                 notification: {
                     title: from + 'sends you a message.',
@@ -51,7 +51,7 @@ router.post('/send', function (req, res, next) {
                 }
             }
 
-            options.body = message;
+            options.body = messageToSend;
             request(options, function (err, incoming, resbonses) {
                 if (err) {
                     console.log('error');
