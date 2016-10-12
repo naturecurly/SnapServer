@@ -68,6 +68,17 @@ router.get('/addfriends', function (req, res, next) {
 
 });
 
+router.get('/addmobile', function (req, res, next) {
+    var username = req.query.username;
+    var mobile = req.query.mobile;
+    console.log(username + ', ' + mobile);
+    db.addMobile(mobile, username, function () {
+        res.send({success: true, message: 'Add success'});
+    }, function () {
+        res.send({success: false, message: 'Add fail'});
+    })
+})
+
 router.post('/updateid', function (req, res, next) {
     var deviceId = req.body.deviceId;
     var username = req.body.username;

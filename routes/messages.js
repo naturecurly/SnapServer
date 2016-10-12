@@ -22,6 +22,7 @@ router.post('/send', function (req, res, next) {
     var to = req.body.to;
     var type = req.body.type;
     var content = req.body.content;
+    var timeElapse = req.body.time;
     console.log(from + ', ' + to + ', ' + type + ', ' + content);
     db.getDeviceId(from, to, function (doc) {
         console.log(doc);
@@ -46,7 +47,7 @@ router.post('/send', function (req, res, next) {
                     message: content
                 },
                 notification: {
-                    title: from + 'sends you a message.',
+                    title: from + ' sends you a message.',
                     body: 'Click to open',
                     sound: 'default'
                 }

@@ -77,7 +77,7 @@ exports.checkEmail = function (email, found, notFound) {
     });
 };
 
-exports.addFriend = function (account, username, success, fail) {
+var addFriend = function (account, username, success, fail) {
     if (account == username) {
         fail();
     } else {
@@ -102,6 +102,34 @@ exports.addFriend = function (account, username, success, fail) {
         });
     }
 };
+
+exports.addMobile = function (mobile, account, success, fail) {
+    User.findOne({username: account}, function (err, doc) {
+        if (err) {
+            fail();
+        } else {
+            if (doc) {
+                if (doc.mobile == mobile) {
+                    fail();
+                }
+                else {
+                    User.findOne({mobile: mobile}, function (err, doc) {
+                        if (err) {
+                            fail();
+                        } else {
+                            if (doc) {
+                                var targetUsername = doc.username;
+                                addFriend(account, targetUsername, success, fail);
+                            } else {
+                                fail();
+                            }
+                        }
+                    })
+                }
+            }
+        }
+    })
+}
 
 exports.updateDeviceId = function (username, deviceId, success, fail) {
     User.findOneAndUpdate({username: username}, {device_id: deviceId}, function (err, doc) {
@@ -134,3 +162,4 @@ exports.getDeviceId = function (from, to, success, fail) {
     });
 };
 
+exports.addFriend = addFriend;
