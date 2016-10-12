@@ -22,6 +22,7 @@ router.post('/send', function (req, res, next) {
     var to = req.body.to;
     var type = req.body.type;
     var content = req.body.content;
+    console.log(from + ', ' + to + ', ' + type + ', ' + content);
     db.getDeviceId(from, to, function (doc) {
         console.log(doc);
         var fromId = "";

@@ -24,21 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="www" pinned="false" current-in-tab="true">
+      <file leaf-file-name="www" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/www">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+            <state relative-caret-position="330">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="messages.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/messages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
+            <state relative-caret-position="330">
+              <caret line="24" column="65" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
               <folding>
                 <element signature="e#0#48#0" expanded="false" />
               </folding>
@@ -322,7 +322,7 @@
       <workItem from="1475450120215" duration="7995000" />
       <workItem from="1475818177310" duration="14292000" />
       <workItem from="1476177653080" duration="136000" />
-      <workItem from="1476236451661" duration="967000" />
+      <workItem from="1476236451661" duration="1490000" />
     </task>
     <task id="LOCAL-00001" summary="-IMPROVEMENT: Set the username and email to be unique.">
       <created>1472617693489</created>
@@ -373,11 +373,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475987215774</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="-CHANGE: Change some names.">
+      <created>1476248169553</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1476248169553</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49014000" />
+    <option name="totallyTimeSpent" value="49537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="146" y="36" width="1210" height="804" extended-state="0" />
@@ -420,7 +427,8 @@
     <MESSAGE value="-NEW: Add upload function and update device id function." />
     <MESSAGE value="-NEW: Add send function." />
     <MESSAGE value="-FIX: The bug when 'from' and 'to' are the same." />
-    <option name="LAST_COMMIT_MESSAGE" value="-FIX: The bug when 'from' and 'to' are the same." />
+    <MESSAGE value="-CHANGE: Change some names." />
+    <option name="LAST_COMMIT_MESSAGE" value="-CHANGE: Change some names." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -765,21 +773,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/messages.js">
+    <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#48#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
+    <entry file="file://$PROJECT_DIR$/routes/messages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="330">
+          <caret line="24" column="65" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
