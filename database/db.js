@@ -132,19 +132,35 @@ exports.addMobile = function (mobile, account, success, fail) {
 }
 
 exports.updateDeviceId = function (username, deviceId, success, fail) {
-    User.findOneAndUpdate({username: username}, {device_id: deviceId}, function (err, doc) {
+    User.findOne({device_id: deviceId}, function (err, doc) {
         if (err) {
-            console.log("update error!");
-            fail();
-        } else {
-            if (doc) {
-                console.log(doc);
-                success(doc);
-            } else {
-                fail();
-            }
+
         }
+        if (doc) {
+            User.findOneAndUpdate({username: doc.username}, {device_id: ""}, function (err, doc) {
+                if (err) {
+
+                }
+                if (doc) {
+                    
+                }
+            });
+        }
+        User.findOneAndUpdate({username: username}, {device_id: deviceId}, function (err, doc) {
+            if (err) {
+                console.log("update error!");
+                fail();
+            } else {
+                if (doc) {
+                    console.log(doc);
+                    success(doc);
+                } else {
+                    fail();
+                }
+            }
+        });
     });
+
 };
 
 exports.getDeviceId = function (from, to, success, fail) {
