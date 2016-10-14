@@ -37,8 +37,8 @@
       <file leaf-file-name="messages.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/messages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+            <state relative-caret-position="195">
+              <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
               <folding>
                 <element signature="e#0#48#0" expanded="false" />
               </folding>
@@ -337,7 +337,7 @@
       <workItem from="1475818177310" duration="14292000" />
       <workItem from="1476177653080" duration="136000" />
       <workItem from="1476236451661" duration="7237000" />
-      <workItem from="1476418823820" duration="889000" />
+      <workItem from="1476418823820" duration="1034000" />
     </task>
     <task id="LOCAL-00001" summary="-IMPROVEMENT: Set the username and email to be unique.">
       <created>1472617693489</created>
@@ -430,11 +430,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476419861986</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="-NEW: Add from">
+      <created>1476422610114</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1476422610114</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56173000" />
+    <option name="totallyTimeSpent" value="56318000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="146" y="36" width="1210" height="804" extended-state="0" />
@@ -482,7 +489,8 @@
     <MESSAGE value="-NEW: Add 'add friend by mobile' function" />
     <MESSAGE value="-NEW: Update device id will remove existed id." />
     <MESSAGE value="-NEW: Add log information" />
-    <option name="LAST_COMMIT_MESSAGE" value="-NEW: Add log information" />
+    <MESSAGE value="-NEW: Add from" />
+    <option name="LAST_COMMIT_MESSAGE" value="-NEW: Add from" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -909,8 +917,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/messages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+        <state relative-caret-position="195">
+          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
           <folding>
             <element signature="e#0#48#0" expanded="false" />
           </folding>
