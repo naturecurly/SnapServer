@@ -28,6 +28,7 @@ router.post('/send', function (req, res, next) {
         console.log(doc);
         var fromId = "";
         var toId = "";
+        console.log('find ' + doc.length + ' docs');
         if (doc.length != 2) {
             res.sendStatus(500);
         } else {
@@ -56,7 +57,7 @@ router.post('/send', function (req, res, next) {
             options.body = messageToSend;
             request(options, function (err, incoming, resbonses) {
                 if (err) {
-                    console.log('error');
+                    console.log(err);
                     res.sendStatus(500);
                 } else {
                     res.send(resbonses);
