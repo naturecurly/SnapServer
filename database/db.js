@@ -83,13 +83,20 @@ var addFriend = function (account, username, success, fail) {
     } else {
         User.findOne({username: account}, function (err, doc) {
             if (doc) {
-                User.findOne({username: username}, function (err, doc) {
+                User.findOne({username: username}, {
+                    password: 0,
+                    friend: 0,
+                    device_id: 0,
+                    subscribeIds: 0,
+                    birthday: 0
+                }, function (err, doc) {
                     if (doc) {
+                        var friend = doc;
                         User.update({username: account}, {$addToSet: {friend: username}}, function (err, doc) {
                             if (doc.nModified == 0) {
                                 fail();
                             } else {
-                                success();
+                                success(friend);
                             }
                         });
                     } else {
@@ -124,12 +131,12 @@ exports.addMobile = function (mobile, account, success, fail) {
                                 fail();
                             }
                         }
-                    })
+                    });
                 }
             }
         }
-    })
-}
+    });
+};
 
 exports.updateDeviceId = function (username, deviceId, success, fail) {
     User.findOne({device_id: deviceId}, function (err, doc) {
@@ -142,7 +149,7 @@ exports.updateDeviceId = function (username, deviceId, success, fail) {
 
                 }
                 if (doc) {
-                    
+
                 }
             });
         }
@@ -178,4 +185,28 @@ exports.getDeviceId = function (from, to, success, fail) {
     });
 };
 
+exports.getFriendsInfo = function (username, success, fail) {
+    User.findOne({username: username}, 'friend', function (err, doc) {
+        if (doc) {
+            console.log(doc);
+            var friends = doc.friend;
+            User.find({username: {$in: friends}}, {
+                password: 0,
+                friend: 0,
+                device_id: 0,
+                subscribeIds: 0,
+                birthday: 0
+            }, function (err, doc) {
+                if (doc) {
+                    success(doc);
+                } else {
+                    fail();
+                }
+            });
+
+        } else {
+            fail();
+        }
+    });
+};
 exports.addFriend = addFriend;

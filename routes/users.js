@@ -59,10 +59,10 @@ router.get('/checkemail', function (req, res, next) {
 router.get('/addfriends', function (req, res, next) {
     var username = req.query.username;
     var account = req.query.account;
-    db.addFriend(account, username, function () {
-        res.send({success: true, message: 'Add success'});
+    db.addFriend(account, username, function (doc) {
+        res.send(doc);
     }, function () {
-        res.send({success: false, message: 'Add fail'});
+        res.sendStatus(500);
     });
 
 
@@ -72,12 +72,12 @@ router.get('/addmobile', function (req, res, next) {
     var username = req.query.username;
     var mobile = req.query.mobile;
     console.log(username + ', ' + mobile);
-    db.addMobile(mobile, username, function () {
-        res.send({success: true, message: 'Add success'});
+    db.addMobile(mobile, username, function (doc) {
+        res.send(doc)
     }, function () {
-        res.send({success: false, message: 'Add fail'});
-    })
-})
+        res.sendStatus(500);
+    });
+});
 
 router.post('/updateid', function (req, res, next) {
     var deviceId = req.body.deviceId;
@@ -87,6 +87,14 @@ router.post('/updateid', function (req, res, next) {
     }, function () {
         res.sendStatus(500);
     })
-})
+});
 
+router.post('/fetchfriends', function (req, res, next) {
+    var username = req.body.username;
+    db.getFriendsInfo(username, function (doc) {
+        res.send(doc);
+    }, function () {
+        res.sendStatus(500);
+    });
+});
 module.exports = router;

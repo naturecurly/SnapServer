@@ -46,7 +46,8 @@ router.post('/send', function (req, res, next) {
                 data: {
                     fromUsername: from,
                     type: type,
-                    message: content
+                    message: content,
+                    timeElapse: timeElapse
                 },
                 notification: {
                     title: from + ' sends you a message.',
