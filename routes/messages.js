@@ -46,6 +46,7 @@ router.post('/send', function (req, res, next) {
             var messageToSend = {
                 to: toId,
                 data: {
+                    toUser: to,
                     fromUsername: from,
                     type: type,
                     message: content,
