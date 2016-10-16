@@ -24,6 +24,7 @@ router.post('/send', function (req, res, next) {
     var content = req.body.content;
     var live_time = req.body.live_time;
     var status = req.body.status;
+    var remoteId = req.body.remoteId;
     console.log(from + ', ' + to + ', ' + type + ', ' + content);
     db.getDeviceId(from, to, function (doc) {
         console.log(doc);
@@ -49,7 +50,8 @@ router.post('/send', function (req, res, next) {
                     type: type,
                     message: content,
                     live_time: live_time,
-                    status: status
+                    status: status,
+                    remoteId: remoteId
                 },
                 notification: {
                     title: from + ' sends you a message.',
