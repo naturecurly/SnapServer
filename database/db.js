@@ -96,7 +96,13 @@ var addFriend = function (account, username, success, fail) {
                             if (doc.nModified == 0) {
                                 fail();
                             } else {
-                                success(friend);
+                                User.update({username: username}, {$addToSet: {friend: account}}, function (err, doc) {
+                                    if (doc.nModified == 0) {
+                                        fail;
+                                    } else {
+                                        success(friend);
+                                    }
+                                });
                             }
                         });
                     } else {
