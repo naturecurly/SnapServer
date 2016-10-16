@@ -29,7 +29,7 @@ router.post('/upload', upload.single('image'), function (req, res, next) {
             console.log('read file error');
             res.send({success: false, message: 'Upload failed'});
         } else {
-            res.send({success: true, message: file.path})
+            res.send({success: true, message: file.path.substring(7)})
         }
     });
 });
